@@ -211,3 +211,13 @@
   new PureCounter();
 
 })()
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Simulate a delay (you can remove this in production)
+  setTimeout(function() {
+    // Hide preloader
+    document.querySelector('.preloader').style.display = 'none';
+    // Show content
+    document.querySelector('.content').style.display = 'block';
+  }, 2000); // Adjust the delay as needed (2000 = 2 seconds)
+});
