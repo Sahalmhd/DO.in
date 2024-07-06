@@ -42,6 +42,10 @@ document.addEventListener("DOMContentLoaded", function() {
       if (response.ok) {
         sentElement.style.display = 'block';
         form.reset();
+        // Hide success message after 3 seconds
+        setTimeout(function() {
+          sentElement.style.display = 'none';
+        }, 3000); // 3000 milliseconds = 3 seconds
       } else {
         return response.json().then(data => {
           if (Object.hasOwn(data, 'errors')) {
